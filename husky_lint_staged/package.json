@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "lint": "eslint . --fix",
+    "prettier:fix": "prettier --write",
+    "prettier:check": "prettier --check ."
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "yarn prettier:fix",
+      "yarn lint"
+    ],
+    "*.json": [
+      "yarn prettiern:fix"
+    ]
+  }
+}
